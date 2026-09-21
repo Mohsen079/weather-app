@@ -1,9 +1,8 @@
-import axiosInstance from "./axiosInstance";
+import { geoAxiosInstance } from "./axiosInstance";
 
 export async function getGeoAPI(name, count = 10) {
 
-
-    const response = await axiosInstance.get("/search", {
+    const response = await geoAxiosInstance.get("/search", {
         params: {
             name: name.trim(),
             count,
